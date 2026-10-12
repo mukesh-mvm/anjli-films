@@ -50,7 +50,30 @@ We have created the new section based on the design provided by the user, with *
 
 ---
 
+---
+
+## Mobile Header Redesign (Matching Reference Design)
+
+We have rebuilt the mobile header structure to match the user's reference design:
+
+1. **Top Contact Strip (Dark Forest Green `#24321d`)**:
+   - Left side: 📞 `Appointments: +91 89557-93320` in warm gold `#dfc27e` with direct tap-to-call link.
+   - Right side: 💬 `WhatsApp Us` in warm gold `#dfc27e` with direct tap-to-chat link.
+   - Fits seamlessly in a compact horizontal strip above the main navigation.
+
+2. **Main Navigation Row (Ivory/White `#ffffff`)**:
+   - **Left**: Brand logo (`Anjali Films` camera icon + serif typography) followed by a thin vertical divider (`|`) and the circular trust badge (`★` rating ring) without cluttering text.
+   - **Right**: Two rounded-square (squircle `border-radius: 12px`) quick-action buttons side by side:
+     - **Phone Call Button**: Dark forest green (`#283620`), outline phone handset SVG icon in crisp white.
+     - **WhatsApp Button**: Olive-gold / bronze (`#7d6325`), WhatsApp chat SVG icon in crisp white.
+
+3. **Performance & Space Efficiency**:
+   - Replaced the previous 3-row stacked mobile header (~190px tall) with a sleek, compact layout (~85px total height).
+   - Fully responsive down to 360px without text wrapping, overflow, or horizontal scroll.
+
+---
+
 ## Live Status
 - Web server running at:
 🌐 **`http://localhost:3000/`**
-- Section anchor: `http://localhost:3000/#process`
+- Test with mobile viewport emulation (e.g. 390px × 844px).

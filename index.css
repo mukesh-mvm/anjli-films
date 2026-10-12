@@ -90,12 +90,65 @@ img {
 }
 
 /* ==========================================================================
-   TOP NOTIFICATION & ACTION BAR (Image 1 Style)
+   TOP CONTACT STRIP (Appointments Phone + WhatsApp Us)
+   ========================================================================== */
+.header-top-bar {
+  background-color: #24321d;
+  border-bottom: 1px solid rgba(223, 194, 126, 0.22);
+  padding: 7px 0;
+  width: 100%;
+}
+
+.header-top-bar-inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.top-bar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #dfc27e;
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.top-bar-link:hover {
+  color: #ffffff;
+}
+
+.top-bar-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  fill: #dfc27e;
+  transition: fill var(--transition-fast);
+}
+
+.top-bar-link:hover .top-bar-icon {
+  fill: #ffffff;
+}
+
+.top-bar-highlight {
+  font-weight: 700;
+  color: #f6ebd2;
+}
+
+/* ==========================================================================
+   MAIN NAVIGATION & BRAND BAR
    ========================================================================== */
 .top-header {
   background-color: #ffffff;
   border-bottom: 1px solid #eae5db;
-  padding: 10px 0;
+  padding: 0;
   position: relative;
   z-index: 100;
 }
@@ -103,7 +156,7 @@ img {
 .top-header-inner {
   max-width: 1380px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -221,8 +274,11 @@ img {
 .btn-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  padding: 8px 18px;
+  padding: 0 20px;
+  height: 42px;
+  min-height: 42px;
   border-radius: var(--radius-pill);
   font-size: 0.88rem;
   font-weight: 600;
@@ -230,42 +286,66 @@ img {
   cursor: pointer;
   transition: all var(--transition-fast);
   border: none;
+  white-space: nowrap !important;
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+.btn-action-icon {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .btn-call-top {
   background-color: #2b3922;
   color: #ffffff;
+  border: 1.5px solid #2b3922;
+  box-shadow: 0 2px 8px rgba(43, 57, 34, 0.15);
 }
 
 .btn-call-top:hover {
   background-color: #1d2717;
+  border-color: #1d2717;
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(43, 57, 34, 0.28);
+  color: #ffffff;
 }
 
 .btn-whatsapp-top {
   background-color: #7d6526;
   color: #ffffff;
+  border: 1.5px solid #7d6526;
+  box-shadow: 0 2px 8px rgba(125, 101, 38, 0.15);
 }
 
 .btn-whatsapp-top:hover {
   background-color: #64511d;
+  border-color: #64511d;
   transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(125, 101, 38, 0.28);
+  color: #ffffff;
 }
 
 .btn-quote-top {
   background-color: #ffffff;
   color: #1f271b;
   border: 1.5px solid #2b3922;
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding: 8px 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .btn-quote-top:hover {
   background-color: #2b3922;
   color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(43, 57, 34, 0.25);
 }
 
 
@@ -314,6 +394,7 @@ img {
 .hero-left {
   color: #ffffff;
   padding-right: 15px;
+  text-align: left;
 }
 
 .hero-pill-badge {
@@ -331,6 +412,7 @@ img {
   color: #dfc27e;
   margin-bottom: 22px;
   backdrop-filter: blur(8px);
+  text-align: left;
 }
 
 .hero-pill-badge svg {
@@ -348,6 +430,7 @@ img {
   color: #ffffff;
   margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-align: left;
 }
 
 .hero-title span {
@@ -362,6 +445,7 @@ img {
   margin-bottom: 28px;
   max-width: 580px;
   font-weight: 400;
+  text-align: left;
 }
 
 /* Feature Badges (3 Pills from Image 1) */
@@ -758,13 +842,14 @@ img {
   background-color: var(--color-warm-bg);
   color: var(--color-text-main);
   position: relative;
+  padding-top: 65px;
   padding-bottom: 90px;
 }
 
 /* 4 Floating Badges Overlapping (Image 1 Style with scalloped petal effect) */
 .badges-floating-wrapper {
   max-width: 1380px;
-  margin: -50px auto 45px;
+  margin: 0 auto 45px;
   padding: 0 24px;
   position: relative;
   z-index: 25;
@@ -2092,7 +2177,7 @@ img {
   
   .hero-left {
     padding-right: 0;
-    text-align: center;
+    text-align: left;
   }
   
   .hero-pill-badge,
@@ -2100,14 +2185,23 @@ img {
   .hero-feature-pills,
   .hero-cta-group,
   .hero-meta-row {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
   }
   
   .form-card-container {
     max-width: 580px;
     margin: 0 auto;
+  }
+
+  .section-two {
+    padding-top: 50px;
+  }
+
+  .badges-floating-wrapper {
+    margin: 0 auto 35px;
   }
 
   .badges-container {
@@ -2121,12 +2215,12 @@ img {
   }
 
   .section2-left-content {
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: flex-start;
   }
 
   .section2-pill-tag {
-    align-self: center;
+    align-self: flex-start;
   }
 
   .services-cards-grid {
@@ -2213,130 +2307,222 @@ img {
     box-sizing: border-box !important;
   }
 
+  /* ========================================================================
+     GLOBAL MOBILE TEXT LEFT ALIGNMENT
+     ======================================================================== */
+  body,
+  section,
+  article,
+  p,
+  h1, h2, h3, h4, h5, h6,
+  .brand-text,
+  .section2-left-content,
+  .section2-text-block,
+  .journey-content-col,
+  .journey-bottom-banner,
+  .gallery-stories-header,
+  .services-chapters-header,
+  .experience-header,
+  .studio-location-info,
+  .footer-container {
+    text-align: left;
+  }
+
+  /* ========================================================================
+     MOBILE HEADER (Rebuilt to match user reference design exactly)
+     ======================================================================== */
   .top-header {
-    padding: 10px 0 12px;
+    padding: 0 !important;
     background-color: #ffffff;
     border-bottom: 1px solid #ebd9ab;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
   }
 
-  .top-header-inner {
-    flex-direction: column;
-    gap: 10px;
+  /* Top Contact Strip (Dark Forest Green with Appointments & WhatsApp Us) */
+  .header-top-bar {
+    padding: 7px 0 !important;
+    background-color: #24321d !important;
+    border-bottom: 1px solid rgba(223, 194, 126, 0.25) !important;
   }
 
-  /* Row 1: Brand on Left, Accredited Rating on Right */
+  .header-top-bar-inner {
+    padding: 0 16px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  .top-bar-link {
+    font-size: 0.74rem !important;
+    gap: 5px !important;
+  }
+
+  .top-bar-icon {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  /* Main Navigation Bar (Clean single horizontal row) */
+  .top-header-inner {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 8px 16px !important;
+    gap: 10px !important;
+  }
+
+  /* Left: Brand Logo + Divider + Accredited Badge */
   .brand-wrapper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 auto;
   }
 
   .brand-logo {
-    gap: 8px;
-    min-width: 0;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    min-width: 0 !important;
   }
 
   .brand-symbol {
-    width: 36px;
-    height: 36px;
-    font-size: 16px;
-    flex-shrink: 0;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 17px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .brand-text {
+    min-width: 0 !important;
   }
 
   .brand-title {
-    font-size: 1.3rem;
-    line-height: 1.1;
-    white-space: nowrap;
+    font-size: 1.25rem !important;
+    line-height: 1.1 !important;
+    white-space: nowrap !important;
   }
 
   .brand-subtitle {
-    font-size: 0.6rem;
-    letter-spacing: 0.12em;
+    font-size: 0.58rem !important;
+    letter-spacing: 0.1em !important;
+    white-space: nowrap !important;
   }
 
   .header-badge-accredited {
-    padding-left: 0;
-    border-left: none;
-    gap: 6px;
-    flex-shrink: 0;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 10px !important;
+    margin-left: 4px !important;
+    border-left: 1px solid #ded5c5 !important;
+    flex-shrink: 0 !important;
   }
 
   .badge-ring {
-    width: 28px;
-    height: 28px;
-    font-size: 12px;
-    flex-shrink: 0;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 13px !important;
+    flex-shrink: 0 !important;
+    border-radius: 50% !important;
+    border: 2px solid #c59b27 !important;
+    color: #c59b27 !important;
+    background-color: #fdfbf7 !important;
   }
 
+  /* In mobile view, hide the verbose text next to the badge so it renders cleanly as [Logo | Badge] just like reference */
   .badge-text-tiny {
-    font-size: 0.65rem;
-    line-height: 1.15;
-    text-align: right;
+    display: none !important;
   }
 
-  /* Row 2: Phone number banner */
+  /* Right: Quick Action Icon Squircles */
   .header-actions {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    width: auto !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+    gap: 8px !important;
   }
 
+  /* Hide old bulky phone info box */
   .phone-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background: #fbf9f4;
-    border: 1px solid #ebd9ab;
-    border-radius: var(--radius-sm);
-    padding: 6px 12px;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
+    display: none !important;
   }
 
-  .phone-label {
-    font-size: 0.64rem;
-    color: #7d6526;
-    letter-spacing: 0.06em;
-  }
-
-  .phone-number {
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-  }
-
-  /* Row 3 & 4: Symmetrical Action Buttons */
   .header-buttons-group {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: auto !important;
   }
 
   .btn-pill {
-    padding: 9px 8px;
-    font-size: 0.82rem;
-    justify-content: center;
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 
+  /* Button 1: Dark Forest Green Phone Squircle */
   .btn-call-top {
-    width: 100%;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    border-radius: 12px !important;
+    background-color: #283620 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 6px rgba(40, 54, 32, 0.25) !important;
+    color: #ffffff !important;
+    transition: transform var(--transition-fast), background-color var(--transition-fast) !important;
   }
 
+  .btn-call-top:hover,
+  .btn-call-top:active {
+    background-color: #1b2515 !important;
+    transform: scale(0.97) !important;
+  }
+
+  /* Button 2: Olive-Gold / Bronze WhatsApp Squircle */
   .btn-whatsapp-top {
-    width: 100%;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    max-width: 42px !important;
+    border-radius: 12px !important;
+    background-color: #7d6325 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 6px rgba(125, 99, 37, 0.25) !important;
+    color: #ffffff !important;
+    transition: transform var(--transition-fast), background-color var(--transition-fast) !important;
   }
 
-  /* Hide Request a Callback button from top-header on mobile devices */
+  .btn-whatsapp-top:hover,
+  .btn-whatsapp-top:active {
+    background-color: #644f1c !important;
+    transform: scale(0.97) !important;
+  }
+
+  /* Hide button labels on mobile so they are clean icon squircles */
+  .btn-label-text {
+    display: none !important;
+  }
+
+  .btn-action-icon {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+  }
+
   /* Hide Request a Callback button from top-header on mobile devices */
   .top-header .btn-quote-top {
     display: none !important;
@@ -2349,6 +2535,7 @@ img {
   /* Section 1: Hero Section */
   .hero-section {
     padding: 24px 0 28px;
+    text-align: left !important;
   }
 
   .hero-grid {
@@ -2357,19 +2544,30 @@ img {
     width: 100%;
   }
 
+  .hero-left {
+    text-align: left !important;
+    width: 100%;
+    padding-right: 0 !important;
+  }
+
   .hero-pill-badge {
     max-width: 100%;
     box-sizing: border-box;
     white-space: normal;
-    text-align: center;
+    text-align: left !important;
     line-height: 1.35;
     letter-spacing: 0.08em;
     font-size: 0.68rem;
     padding: 5px 12px;
     margin-bottom: 10px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+    display: inline-flex !important;
   }
 
   .hero-title {
+    text-align: left !important;
     font-size: 1.95rem;
     margin-bottom: 10px;
     word-break: break-word;
@@ -2377,34 +2575,121 @@ img {
   }
 
   .hero-description {
+    text-align: left !important;
     font-size: 0.92rem;
     line-height: 1.55;
     margin-bottom: 12px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
     word-break: break-word;
   }
 
   .hero-feature-pills {
     margin-bottom: 14px;
     gap: 6px;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
   }
 
   .feature-pill {
     padding: 6px 12px;
     font-size: 0.78rem;
+    text-align: left !important;
+    justify-content: flex-start !important;
   }
 
   .hero-cta-group {
-    margin-bottom: 14px;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 9px !important;
+    width: auto !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    margin-bottom: 16px !important;
+  }
+
+  .btn-hero-primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    background: #cca038 !important;
+    background-color: #cca038 !important;
+    color: #1a2416 !important;
+    border: 2px solid rgba(34, 46, 26, 0.55) !important;
+    border-radius: 9px !important;
+    padding: 10px 18px !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+
+  .btn-hero-primary:hover,
+  .btn-hero-primary:active {
+    background: #b88e2c !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .btn-hero-whatsapp {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    background: rgba(36, 48, 29, 0.82) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    color: #ffffff !important;
+    border: 1.2px solid rgba(255, 255, 255, 0.32) !important;
+    border-radius: 9px !important;
+    padding: 9px 16px !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.01em !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12) !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+  }
+
+  .btn-hero-whatsapp:hover,
+  .btn-hero-whatsapp:active {
+    background: rgba(36, 48, 29, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    color: #ffffff !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .btn-hero-whatsapp svg {
+    width: 16px !important;
+    height: 16px !important;
+    fill: #ffffff !important;
+    flex-shrink: 0 !important;
   }
 
   .hero-meta-row {
     flex-direction: column;
     gap: 6px;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start !important;
+    text-align: left !important;
     width: 100%;
     padding-top: 10px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    justify-content: flex-start !important;
+  }
+
+  .meta-item {
+    justify-content: flex-start !important;
+    text-align: left !important;
   }
 
   .form-card-container {
@@ -2438,12 +2723,13 @@ img {
 
   /* Section 2: Why Anjali Films */
   .section-two {
-    padding-bottom: 32px;
+    padding-top: 38px !important;
+    padding-bottom: 34px;
   }
 
   .badges-floating-wrapper {
-    margin-top: -16px;
-    margin-bottom: 18px;
+    margin-top: 0 !important;
+    margin-bottom: 22px;
   }
 
   .badges-container {
@@ -2487,15 +2773,30 @@ img {
     width: 100%;
   }
 
+  /* Section 2: Why Anjali Films */
+  .section2-left-content {
+    text-align: left !important;
+    align-items: flex-start !important;
+    width: 100%;
+  }
+
   .section2-pill-tag {
     margin-bottom: 8px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    align-self: flex-start !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
   }
 
   .section2-brand-tag {
+    text-align: left !important;
     margin-bottom: 4px;
+    display: block;
   }
 
   .section2-heading {
+    text-align: left !important;
     font-size: 1.95rem;
     margin-bottom: 10px;
     word-break: break-word;
@@ -2503,25 +2804,38 @@ img {
   }
 
   .section2-text-block {
+    text-align: left !important;
     margin-bottom: 14px;
     gap: 10px;
   }
 
   .section2-paragraph-lead {
+    text-align: left !important;
     font-size: 0.95rem;
     line-height: 1.55;
   }
 
   .section2-paragraph-body {
+    text-align: left !important;
     font-size: 0.88rem;
     line-height: 1.55;
   }
 
   .section2-cta-wrap {
+    align-self: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
     margin-bottom: 16px;
   }
 
+  .btn-section2-request {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: fit-content !important;
+  }
+
   .section2-right-header {
+    text-align: left !important;
     margin-bottom: 10px;
   }
 
@@ -2539,11 +2853,21 @@ img {
     gap: 10px;
     width: 100%;
     box-sizing: border-box;
+    text-align: left !important;
+  }
+
+  .feature-title {
+    text-align: left !important;
+  }
+
+  .feature-desc {
+    text-align: left !important;
   }
 
   /* Section 3: Cinematography Journey Section 768px */
   .cinematography-journey-section {
     padding: 34px 0 38px;
+    text-align: left !important;
   }
 
   .journey-top-grid {
@@ -2552,11 +2876,22 @@ img {
     width: 100%;
   }
 
+  .journey-content-col {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+
   .journey-tag-pill {
     margin-bottom: 8px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    align-self: flex-start !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
   }
 
   .journey-heading {
+    text-align: left !important;
     font-size: 1.9rem;
     margin-bottom: 10px;
     word-break: break-word;
@@ -2564,17 +2899,20 @@ img {
   }
 
   .journey-lead-text {
+    text-align: left !important;
     margin-bottom: 6px;
     font-size: 0.95rem;
   }
 
   .journey-body-text {
+    text-align: left !important;
     margin-bottom: 10px;
     font-size: 0.88rem;
     line-height: 1.55;
   }
 
   .journey-deliverables-label {
+    text-align: left !important;
     margin-bottom: 8px;
   }
 
@@ -2588,6 +2926,27 @@ img {
 
   .journey-box-item {
     padding: 8px 10px;
+    text-align: left !important;
+  }
+
+  .journey-box-title {
+    text-align: left !important;
+  }
+
+  .journey-box-desc {
+    text-align: left !important;
+  }
+
+  .journey-cta-wrap {
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    text-align: left !important;
+  }
+
+  .btn-journey-cta {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: fit-content !important;
   }
 
   .journey-bottom-banner {
@@ -2597,9 +2956,11 @@ img {
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    text-align: left !important;
   }
 
   .journey-banner-title {
+    text-align: left !important;
     font-size: 1.45rem;
     margin-bottom: 14px;
     word-break: break-word;
@@ -2616,20 +2977,37 @@ img {
     display: none !important;
   }
 
+  .timeline-step-item {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .step-label-title {
+    text-align: left !important;
+  }
+
+  .step-label-sub {
+    text-align: left !important;
+  }
+
   /* Section 4: Our Work 768px */
   .gallery-stories-section {
     padding: 34px 0 38px;
+    text-align: left !important;
   }
 
   .gallery-stories-header {
     margin-bottom: 16px;
+    text-align: left !important;
   }
 
   .gallery-overline {
     margin-bottom: 6px;
+    text-align: left !important;
   }
 
   .gallery-stories-title {
+    text-align: left !important;
     font-size: 1.95rem;
     margin-bottom: 8px;
     line-height: 1.18;
@@ -2638,6 +3016,7 @@ img {
   }
 
   .gallery-stories-desc {
+    text-align: left !important;
     font-size: 0.88rem;
     line-height: 1.5;
   }
@@ -2652,6 +3031,7 @@ img {
   .gallery-overlay {
     opacity: 1;
     padding: 8px;
+    text-align: left !important;
   }
 
   .gallery-tag {
@@ -2662,17 +3042,26 @@ img {
   /* Section 5: Services Chapters Section 768px */
   .services-chapters-section {
     padding: 34px 0 38px;
+    text-align: left !important;
   }
 
   .services-chapters-header {
-    margin: 0 auto 18px;
+    text-align: left !important;
+    margin: 0 0 18px 0 !important;
+    max-width: 100% !important;
   }
 
   .services-tag-pill {
     margin-bottom: 8px;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    align-self: flex-start !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
   }
 
   .services-chapters-title {
+    text-align: left !important;
     font-size: 1.95rem;
     margin-bottom: 8px;
     word-break: break-word;
@@ -2680,6 +3069,8 @@ img {
   }
 
   .services-chapters-sub {
+    text-align: left !important;
+    margin: 0 0 14px 0 !important;
     font-size: 0.88rem;
     line-height: 1.5;
   }
@@ -2696,14 +3087,17 @@ img {
 
   .chapter-card-body {
     padding: 14px 14px 12px;
+    text-align: left !important;
   }
 
   .chapter-card-title {
+    text-align: left !important;
     font-size: 1.18rem;
     margin-bottom: 4px;
   }
 
   .chapter-card-desc {
+    text-align: left !important;
     font-size: 0.82rem;
     margin-bottom: 12px;
   }
@@ -2711,18 +3105,22 @@ img {
   /* Section 6: Experience 768px */
   .experience-section {
     padding: 34px 0 38px;
+    text-align: left !important;
   }
 
   .experience-header {
     margin-bottom: 16px;
+    text-align: left !important;
   }
 
   .experience-overline {
     font-size: 0.72rem;
     margin-bottom: 6px;
+    text-align: left !important;
   }
 
   .experience-title {
+    text-align: left !important;
     font-size: 1.95rem;
     line-height: 1.18;
     max-width: 100%;
@@ -2742,14 +3140,17 @@ img {
     border-radius: 6px;
     width: 100%;
     box-sizing: border-box;
+    text-align: left !important;
   }
 
   .experience-card-title {
+    text-align: left !important;
     font-size: 1.25rem;
     margin-bottom: 6px;
   }
 
   .experience-card-desc {
+    text-align: left !important;
     font-size: 0.88rem;
     line-height: 1.5;
   }
@@ -2757,6 +3158,7 @@ img {
   /* Section 7: Studio Location Section 768px */
   .studio-location-section {
     padding: 34px 0 38px;
+    text-align: left !important;
   }
 
   .studio-location-grid {
@@ -2766,11 +3168,17 @@ img {
     box-sizing: border-box;
   }
 
+  .studio-location-info {
+    text-align: left !important;
+  }
+
   .studio-overline {
     margin-bottom: 6px;
+    text-align: left !important;
   }
 
   .studio-heading {
+    text-align: left !important;
     font-size: 1.95rem;
     line-height: 1.18;
     margin-bottom: 10px;
@@ -2780,9 +3188,11 @@ img {
 
   .studio-address-block {
     margin-bottom: 14px;
+    text-align: left !important;
   }
 
   .studio-address-lead {
+    text-align: left !important;
     font-size: 0.92rem;
     line-height: 1.5;
     margin-bottom: 6px;
@@ -2790,6 +3200,7 @@ img {
   }
 
   .studio-serving-note {
+    text-align: left !important;
     font-size: 0.82rem;
     margin-bottom: 14px;
     word-break: break-word;
@@ -2805,9 +3216,19 @@ img {
   /* Footer on mobile */
   .site-footer {
     padding: 24px 0 16px;
+    text-align: left !important;
+  }
+
+  .footer-container {
+    text-align: left !important;
+  }
+
+  .footer-brand-title {
+    text-align: left !important;
   }
 
   .footer-tagline {
+    text-align: left !important;
     margin-bottom: 8px;
     font-size: 0.82rem;
   }
@@ -2815,8 +3236,9 @@ img {
   .footer-contact-row {
     flex-direction: column;
     gap: 6px;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
     font-size: 0.8rem;
     margin-bottom: 14px;
     word-break: break-word;
@@ -2825,44 +3247,29 @@ img {
   .footer-bottom-copy {
     padding-top: 12px;
     font-size: 0.74rem;
+    text-align: left !important;
   }
 }
 
 @media (max-width: 480px) {
   .brand-title {
-    font-size: 1.18rem;
+    font-size: 1.16rem !important;
   }
 
   .brand-symbol {
-    width: 32px;
-    height: 32px;
-    font-size: 15px;
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 15px !important;
   }
 
   .badge-ring {
-    width: 26px;
-    height: 26px;
-    font-size: 11px;
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 11px !important;
   }
 
-  .badge-text-tiny {
-    font-size: 0.58rem;
-  }
-
-  .phone-info {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 2px;
-    padding: 6px 8px;
-  }
-
-  .phone-label {
-    font-size: 0.6rem;
-  }
-
-  .phone-number {
-    font-size: 0.9rem;
+  .top-bar-link {
+    font-size: 0.7rem !important;
   }
 
   /* Section paddings for small mobile */
@@ -2875,19 +3282,26 @@ img {
   }
 
   .hero-cta-group {
-    flex-direction: column;
-    width: 100%;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: auto !important;
+    gap: 8px !important;
   }
 
   .btn-hero-primary,
   .btn-hero-whatsapp {
-    width: 100%;
-    justify-content: center;
-    padding: 11px 20px;
+    width: fit-content !important;
+    justify-content: flex-start !important;
   }
 
   .section-two {
+    padding-top: 32px !important;
     padding-bottom: 26px;
+  }
+
+  .badges-floating-wrapper {
+    margin-top: 0 !important;
+    margin-bottom: 18px;
   }
 
   /* Cinematography Journey Section 480px */
@@ -2901,8 +3315,9 @@ img {
   }
 
   .btn-journey-cta {
-    width: 100%;
-    justify-content: center;
+    width: fit-content !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
     padding: 11px 20px;
   }
 
@@ -2961,8 +3376,9 @@ img {
   }
 
   .btn-get-directions {
-    width: 100%;
-    text-align: center;
+    width: fit-content !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
     box-sizing: border-box;
     padding: 12px 20px;
   }
@@ -2977,21 +3393,31 @@ img {
 }
 
 @media (max-width: 360px) {
-  .badge-text-tiny {
-    display: none;
-  }
-
   .brand-title {
-    font-size: 1.08rem;
+    font-size: 1.05rem !important;
   }
 
-  .phone-number {
-    font-size: 0.85rem;
+  .brand-symbol {
+    width: 32px !important;
+    height: 32px !important;
   }
 
-  .btn-pill {
-    font-size: 0.76rem;
-    padding: 7px 6px;
+  .btn-call-top,
+  .btn-whatsapp-top {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    border-radius: 10px !important;
+  }
+
+  .btn-action-icon {
+    width: 17px !important;
+    height: 17px !important;
+  }
+
+  .top-bar-link {
+    font-size: 0.65rem !important;
+    gap: 3px !important;
   }
 
   .hero-title {

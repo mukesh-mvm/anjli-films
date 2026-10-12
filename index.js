@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Configure Web3Forms Default Access Key
 // (You can replace this with your active key from https://web3forms.com)
-const DEFAULT_WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const DEFAULT_WEB3FORMS_KEY = "2473a037-456b-4c31-a8a9-6d1871e963de";
 
 /**
  * 1. Set minimum date to today for all date inputs

@@ -12,7 +12,27 @@
   <!-- =======================================================================
        TOP ACTION BAR (Design inspired by Image 1, Info from Image 2)
        ======================================================================= -->
-  <header class="top-header">
+  <header class="top-header" id="site-header">
+    <!-- Top Contact Bar (Inspired by reference design: Appointments Phone + WhatsApp Us) -->
+    <div class="header-top-bar">
+      <div class="header-top-bar-inner">
+        <a href="tel:+918955793320" class="top-bar-link" id="top-bar-phone" title="Call for Appointments">
+          <svg viewBox="0 0 24 24" class="top-bar-icon" fill="currentColor">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.28.37-.68.25-1.02A11.36 11.36 0 0 1 8.57 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z"/>
+          </svg>
+          <span class="top-bar-text">Appointments: <strong class="top-bar-highlight">+91 89557-93320</strong></span>
+        </a>
+
+        <a href="https://wa.me/918955793320?text=Hi%20Anjali%20Films%2C%20I%20would%20like%20to%20enquire%20about%20photography%20and%20cinematography%20packages." target="_blank" rel="noopener noreferrer" class="top-bar-link" id="top-bar-whatsapp" title="Chat on WhatsApp">
+          <svg viewBox="0 0 24 24" class="top-bar-icon" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84-1.56 1.56-3.64 2.42-5.84 2.42-1.44 0-2.86-.38-4.12-1.13l-.3-.18-3.11.82.83-3.03-.2-.31c-.83-1.32-1.28-2.86-1.28-4.43 0-4.54 3.69-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44s-.56-1.36-.77-1.86c-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/>
+          </svg>
+          <span class="top-bar-text">WhatsApp Us</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
     <div class="top-header-inner">
       <div class="brand-wrapper">
         <a href="#hero" class="brand-logo" id="header-brand-logo">
@@ -43,18 +63,18 @@
         </div>
 
         <div class="header-buttons-group">
-          <a href="tel:+918955793320" class="btn-pill btn-call-top" id="top-btn-call">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
-              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.44-5.15-3.75-6.59-6.59l1.97-1.57c.28-.28.37-.68.25-1.02A11.36 11.36 0 0 1 8.57 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.62c0-.55-.45-1-1-1z"/>
+          <a href="tel:+918955793320" class="btn-pill btn-call-top" id="top-btn-call" aria-label="Call +91 89557 93320">
+            <svg viewBox="0 0 24 24" class="btn-action-icon" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
-            <span>Call us</span>
+            <span class="btn-label-text">Call Us</span>
           </a>
 
-          <a href="https://wa.me/918955793320?text=Hi%20Anjali%20Films%2C%20I%20would%20like%20to%20enquire%20about%20photography%20and%20cinematography%20packages." target="_blank" rel="noopener noreferrer" class="btn-pill btn-whatsapp-top" id="top-btn-whatsapp">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+          <a href="https://wa.me/918955793320?text=Hi%20Anjali%20Films%2C%20I%20would%20like%20to%20enquire%20about%20photography%20and%20cinematography%20packages." target="_blank" rel="noopener noreferrer" class="btn-pill btn-whatsapp-top" id="top-btn-whatsapp" aria-label="Chat on WhatsApp">
+            <svg viewBox="0 0 24 24" class="btn-action-icon" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c4.55 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84-1.56 1.56-3.64 2.42-5.84 2.42-1.44 0-2.86-.38-4.12-1.13l-.3-.18-3.11.82.83-3.03-.2-.31c-.83-1.32-1.28-2.86-1.28-4.43 0-4.54 3.69-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.25.25-.42.08-.17.04-.31-.02-.44s-.56-1.36-.77-1.86c-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.12.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.17-.48-.29z"/>
             </svg>
-            <span>WhatsApp</span>
+            <span class="btn-label-text">WhatsApp</span>
           </a>
 
           <button type="button" class="btn-pill btn-quote-top btn-open-callback" id="top-btn-request-callback" data-open-modal="callback-modal">
