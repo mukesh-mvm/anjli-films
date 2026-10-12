@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Configure Web3Forms Default Access Key
 // (You can replace this with your active key from https://web3forms.com)
-const DEFAULT_WEB3FORMS_KEY = "2473a037-456b-4c31-a8a9-6d1871e963de";
+const DEFAULT_WEB3FORMS_KEY = "3ecf3d4c-124a-42a1-b9d4-1a9ede83b4bb";
 
 /**
  * 1. Set minimum date to today for all date inputs
@@ -104,7 +104,7 @@ function initReusableForms() {
       let accessKey = accessKeyInput ? accessKeyInput.value : DEFAULT_WEB3FORMS_KEY;
       if (!accessKey || accessKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
         // Fallback default test key or graceful simulation mode
-        accessKey = '00000000-0000-0000-0000-000000000000';
+        accessKey = '2473a037-456b-4c31-a8a9-6d1871e963de';
       }
 
       // Prepare Submission Payload
